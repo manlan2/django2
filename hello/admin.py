@@ -7,6 +7,7 @@ class PersonAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     list_filter = ('name','sex','money',)
     ordering = ('name',)
+    fields = ('name', 'money',)
 
 # admin.site.register(Person)
 admin.site.register(Person, PersonAdmin)
