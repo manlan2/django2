@@ -25,9 +25,22 @@ def hello(request):
     return render(request, 'table.html', {'userArray': user_list})
 
 def index(request):
-    data_list = ("oneone", "two", "three")
+    # data_list = ("oneone", "two", "three")
+    data_list = ["oneone", "two", "three"]
+    datea = '2017-02-10'
+    date1 = '2017-02-10'
+    date2 = '2011-02-10'
+
+    valuea = 'this is a string'
+
+
     print(data_list)
-    return render(request, 'basic/index.html', {'data_list': data_list})
+    return render(request, 'basic/index.html', locals())
+    # return render(request, 'basic/index2.html', locals())
+    # return render(request, 'basic/index.html',
+    #               {'data_list': data_list,
+    #                'date1':date1}
+    #               )
 
 def hi(request):
     # emp = Person()

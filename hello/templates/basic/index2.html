@@ -1,0 +1,29 @@
+{% include "common/header.html" %}
+
+    <h1>主页</h1>
+
+    <br>
+{#    {% datea %}#}
+    {{ datea }}
+    <br>
+    {{ date1 }}
+
+    {{ date2 }}
+
+    {{ now }}
+
+    <br>
+    {{ valuea | addslashes }}
+    <ul>
+        {% for data in data_list %}
+            <li> {{ data }}  </li>
+        {% endfor %}
+
+{#        {% for data in data_list %}#}
+{#        <li>#}
+{#            {{ data }}#}
+{#        </li>#}
+{#        {% endfor %}#}
+    </ul>
+
+{% include "common/footer.html" %}
