@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^reg/',    views.register),
     url(r'^i/',    views.index),
     url(r'^index/',    views.index),
+    url(r'^baidu/',    views.baidu),
     # url(r'^index/',    views.index ),
 ]

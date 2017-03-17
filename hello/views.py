@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response, redirect
 from django import forms
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpRequest, JsonResponse
 import datetime
 from hello.models import Person
 
@@ -26,7 +26,10 @@ def register(request):
         )
         # Person.save()
 
-        return HttpResponse("添加出版社信息成功")
+        # return HttpResponse("添加出版社信息成功")
+        return render_to_response('basic/addSuccess.html',
+                                  {'name':name}
+                                  )
         # pass
     else:
         # form = UserForm()
@@ -75,6 +78,8 @@ def hi(request):
     # def index(request):
     #     return render(request, '404.html')
 
-
+def baidu(request):
+        baidu = 'http://www.baidu.com'
+        return redirect(baidu)
 
 
