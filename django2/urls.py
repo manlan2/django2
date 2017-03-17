@@ -22,5 +22,8 @@ urlpatterns = [
     # url(r'^hello/', views.hello, name='hello' ),
     url(r'^hello/', views.hello ),
     url(r'^hi/',    views.hi),
+    url(r'^reg/',    views.register),
+    url(r'^i/',    views.index),
+    url(r'^index/',    views.index),
     # url(r'^index/',    views.index ),
 ]
